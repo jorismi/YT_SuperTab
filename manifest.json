@@ -1,0 +1,16 @@
+{
+    "name": "YT_SuperTab",
+    "description": "Display the duration of the YT video directly by hovering its tab",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [{
+        "matches": [ "*://*.youtube.com/*" ],
+        "js": [ "contentScript.js" ]
+    }]
+}
